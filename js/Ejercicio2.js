@@ -1,6 +1,13 @@
 let nota = parseInt(prompt("Ingresa tu calificación:"));
 
-switch (nota) {
+if (isNaN(nota)) {
+  alert("Introduce un numero valido");
+} 
+else if (nota > 10 || nota < 0) {
+  alert("Número erróneo");
+}
+else{
+  switch (nota) {
   case (nota = 0):
   case (nota = 1):
   case (nota = 2): 
@@ -29,4 +36,5 @@ switch (nota) {
   case (nota = 10):
     alert("Sobresaliente");
     break;
+}
 }
